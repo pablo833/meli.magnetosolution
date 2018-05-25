@@ -1,0 +1,19 @@
+# VS CODE
+.vscode/
+
+# CREDENTIALS
+*.credentials.json
+
+# DEBUGGING
+.compiled/
+
+# node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Configurations
+config.json
+
+#Test Coverage
+coverage

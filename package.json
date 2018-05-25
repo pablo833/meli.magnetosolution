@@ -1,0 +1,56 @@
+{
+  "name": "magnetosolution",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      ".compiled",
+      "src/index.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start-server-and-worker": "babel-node src/index.js",
+    "compile": "babel src --out-dir .compiled --source-maps --watch"
+  },
+  "author": "Pablo Sebastian Rodriguez",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "elasticsearch": "^15.0.0",
+    "firebase": "^5.0.3",
+    "firebase-admin": "^5.12.1",
+    "firebase-queue": "^1.6.1",
+    "restify": "^7.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "jest": "^22.4.4",
+    "jest-cli": "^23.0.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  }
+}
